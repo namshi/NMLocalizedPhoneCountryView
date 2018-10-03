@@ -1,0 +1,16 @@
+PODS:
+  - NMLocalizedPhoneCountryView (1.0.0)
+
+DEPENDENCIES:
+  - NMLocalizedPhoneCountryView (from `../`)
+
+EXTERNAL SOURCES:
+  NMLocalizedPhoneCountryView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NMLocalizedPhoneCountryView: d970faaa5bbde92a4e00c45e49b22c39754072d7
+
+PODFILE CHECKSUM: 9b2008915da28f15a1cc254c667261ab8b76f39c
+
+COCOAPODS: 1.5.3
