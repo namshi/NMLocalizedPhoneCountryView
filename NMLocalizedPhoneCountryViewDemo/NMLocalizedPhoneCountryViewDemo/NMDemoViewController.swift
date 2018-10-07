@@ -2,7 +2,7 @@
 //  DemoViewController.swift
 //  NMLocalizedPhoneCountryViewDemo
 //
-//  Updated by Noor on 03/10/2018.
+//  Updated by Mobile Team of Namshi on 03/10/2018.
 //  Originally created as CountryPickerViewDemo by Kizito Nwose on 18/09/2017.
 //  Copyright © 2018 NAMSHI. All rights reserved.
 //
@@ -42,9 +42,11 @@ class DemoViewController: UITableViewController {
         cpvTextField.tag = 2
         cpvIndependent.tag = 3
         
+        getCountriesFromAPI()
+        
         [cpvMain, cpvTextField, cpvIndependent, cpvInternal].forEach {
             $0?.dataSource = self
-            $0?.excludedCountriesList = ["AE", "QA", "SA", "OM", "KW", "BH"]
+            $0?.excludedCountriesList = ["AE", "QA", "SA", "OM", "KW", "BH", "GI", "IM", "ME", "RE", "TG"]
         }
         
         cpvInternal.delegate = self
@@ -58,6 +60,29 @@ class DemoViewController: UITableViewController {
         selectCountryButton.addTarget(self, action: #selector(selectCountryAction(_:)), for: .touchUpInside)
         
         phoneNumberField.showDoneButtonOnKeyboard()
+    }
+    
+    private func getCountriesFromAPI() {
+        let wrongAPI = "https://api.myjson.com/bins/o4bto" // Wrong format of json
+        let correctAPI = "https://api.myjson.com/bins/7e1q4" // Correct format of json
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let url = URL(string: wrongAPI)!
+        let task = session.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print("API Error: \(error!.localizedDescription)")
+            } else {
+                print("API Response: \(String(describing: data))") // JSON Serialization
+                if let dataResponse = data {
+                    if let jsonObjects = (try? JSONSerialization.jsonObject(with: dataResponse, options: JSONSerialization
+                        .ReadingOptions.allowFragments)) as? Array<Any> {
+                        print("API jsonObjects: \(String(describing: jsonObjects))") // JSON Serialization
+                        self.cpvIndependent.jsonCountries = jsonObjects
+                    }
+                }
+            }
+        }
+        task.resume()
     }
     
     

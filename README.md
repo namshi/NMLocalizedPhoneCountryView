@@ -6,7 +6,7 @@
 
 NMLocalizedPhoneCountryView is a simple, customizable view for selecting countries in iOS apps. 
 
-You can clone/download the repository and run the [demo project](https://github.com/namshi/NMLocalizedPhoneCountryView/NMLocalizedPhoneCountryViewDemo) to see NMLocalizedPhoneCountryView in action. First run `pod install` from the NMLocalizedPhoneCountryViewDemo directory.
+You can clone/download the repository and run the [demo project](https://github.com/namshi/NMLocalizedPhoneCountryView/NMLocalizedPhoneCountryViewDemo) to see `NMLocalizedPhoneCountryView` in action. First run `pod install` from the `NMLocalizedPhoneCountryViewDemo` directory.
 
 <img align="left" src="https://raw.githubusercontent.com/namshi/NMLocalizedPhoneCountryView/v1.0.0/NMLocalizedPhoneCountryViewDemo/Screenshots/1.png" width="300"> 
 <img src="https://raw.githubusercontent.com/namshi/NMLocalizedPhoneCountryView/v1.0.0/NMLocalizedPhoneCountryViewDemo/Screenshots/2.png" width="300"> 
@@ -21,7 +21,7 @@ You can clone/download the repository and run the [demo project](https://github.
 
 ### Cocoapods
 
-NMLocalizedPhoneCountryView is available through [CocoaPods](http://cocoapods.org). Simply add the following to your Podfile:
+`NMLocalizedPhoneCountryView` is available through [CocoaPods](http://cocoapods.org). Simply add the following to your Podfile:
 
 ```ruby
 use_frameworks!
@@ -33,7 +33,7 @@ end
 
 ### Manual
 
-1. Put NMLocalizedPhoneCountryView repo somewhere in your project directory.
+1. Put `NMLocalizedPhoneCountryView` repo somewhere in your project directory.
 2. In Xcode, add `NMLocalizedPhoneCountryView.xcodeproj` to your project.
 3. On your app's target, add the NMLocalizedPhoneCountryView framework:
    1. as an embedded binary on the General tab.
@@ -41,15 +41,17 @@ end
 
 ## Usage
 
-If you're using Storyboards/Interface Builder you can create a NMLocalizedPhoneCountryView instance by adding a UIView to your Storyboard, and then manually changing the view's class to NMLocalizedPhoneCountryView in the "Custom Class" field of the Identity Inspector tab on the Utilities panel (the right-side panel)
+If you're using `Storyboards/Interface Builder` you can create a `NMLocalizedPhoneCountryView` instance by adding a `UIView` to your `Storyboard`, and then manually changing the view's class to `NMLocalizedPhoneCountryView` in the "Custom Class" field of the Identity Inspector tab on the Utilities panel (the right-side panel)
 
-You can also create an instance of NMLocalizedPhoneCountryView programmatically:
+You can also create an instance of `NMLocalizedPhoneCountryView` programmatically:
 
 ```swift
 import NMLocalizedPhoneCountryView
 
 let cpv = NMLocalizedPhoneCountryView(frame: /**Desired frame**/)
 ```
+
+#### Selected Country
 
 To get the selected country from your `NMLocalizedPhoneCountryView` instance at any time, use the `selectedCountry` property. 
 
@@ -59,9 +61,69 @@ print(country)
 ```
 This property is not optional, the default value is the user's current country, derived from the device's current Locale.
 
+#### States of selected country
+
+You can also create see the list of states of your selected country.
+
+```swift
+let statesCount = cpv.selectedCountry.states.count
+print("statesCount \(statesCount)")
+```
+
+#### Changing locale of countries view
+
+Change your app locale using 
+```
+cpvMain.localeSetup = NMLocaleSetup(baseLocale: sender.isOn ? "ar" : "Base", isRTL: sender.isOn)
+```
+and see the same list of countries in other locale. We've use Arabic locale in our demo project. 
+
+
+#### Adding new locale for countries view
+
+If you want to support new locale using this library, there are two ways:
+
+####  1. Adding new locale in CountryCodes.json
+Create a new PR and add new country locale in the json file of the original library.
+
+e.g.
+```
+{
+    "name": "United Arab Emirates",
+    "name_ar": "الإمارات",
+    "name_fr" : "Emirats Arabes Unis",  ---->> New locale
+    "dial_code": "+971",
+    "code": "AE"
+}
+```
+####  2. Use your list of countries 
+Instead of using the countries list provided in CountryCodes.json file, you can use your own countries list either locally or from any API response and use it to populate the CountryView.
+Note: Make sure the response format is the same as the current one, as this structure is mandatory for the library to work.
+If the response format of your custom-countries-API is not correct, or it has wrong/empty data, `NMLocalizedPhoneCountryView` will fallback to our local `CountryCodes.json` file. 
+```
+{
+"name": "United Arab Emirates",
+"name_ar": "الإمارات",
+"dial_code": "+971",
+"code": "AE",
+"states": []
+}
+```
+
+Note: If you've not added the translation for any country for a locale, it will show default name in English.
+
+#### Exclude some countries from the main list
+
+You can exclude those countries that you do not want to show in the main list as follows:
+
+```
+cpvMain.excludedCountriesList = ["AE", "QA", "SA", "OM", "KW", "BH"]
+```
+You have to pass the country codes of the excluded countries list in `excludedCountriesList` attribute of your countryView.
+
 ### Customization
 
-Customization options for the view itself are available directly via the NMLocalizedPhoneCountryView instance while options for the internal CountryPicker table view are available via the `NMLocalizedPhoneCountryViewDataSource` protocol. Setting the `NMLocalizedPhoneCountryViewDelegate` protocol is also necessary if you wish to be notified when the user selects a country from the list.
+Customization options for the view itself are available directly via the `NMLocalizedPhoneCountryView` instance while options for the internal CountryView table view are available via the `NMLocalizedPhoneCountryViewDataSource` protocol. Setting the `NMLocalizedPhoneCountryViewDelegate` protocol is also necessary if you wish to be notified when the user selects a country from the list.
 
 ```swift
 import NMLocalizedPhoneCountryView
@@ -194,4 +256,5 @@ Don't forget to set a delegate to be notified when the use selects a country fro
 
 ## License
 
-NMLocalizedPhoneCountryView is distributed under the MIT license. [See LICENSE](https://github.com/namshi/NMLocalizedPhoneCountryView/blob/master/LICENSE) for details.
+`NMLocalizedPhoneCountryView` is distributed under the MIT license. [See LICENSE](https://github.com/namshi/NMLocalizedPhoneCountryView/blob/master/LICENSE) for details.
+Originally inspired from [CountryPickerView](https://github.com/kizitonwose/CountryPickerView).

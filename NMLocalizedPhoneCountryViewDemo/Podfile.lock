@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  NMLocalizedPhoneCountryView: d970faaa5bbde92a4e00c45e49b22c39754072d7
+  NMLocalizedPhoneCountryView: 8ca9c2b8c9569bd5f8585e674b8d1e37b1f3462e
 
 PODFILE CHECKSUM: 9b2008915da28f15a1cc254c667261ab8b76f39c
 

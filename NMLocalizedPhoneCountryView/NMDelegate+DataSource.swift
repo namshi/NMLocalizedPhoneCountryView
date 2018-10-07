@@ -2,7 +2,7 @@
 //  NMDelegate+DataSource.swift
 //  NMLocalizedPhoneCountryView
 //
-//  Updated by Noor on 03/10/2018.
+//  Updated by Mobile Team of Namshi on 03/10/2018.
 //  Originally created as CountryPickerView by Kizito Nwose on 16/02/2017.
 //  Copyright © 2018 NAMSHI. All rights reserved.
 //

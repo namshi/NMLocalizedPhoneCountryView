@@ -2,7 +2,7 @@
 //  NMLocalizedPhoneCountryView.swift
 //  NMLocalizedPhoneCountryView
 //
-//  Updated by Noor on 03/10/2018.
+//  Updated by Mobile Team of Namshi on 03/10/2018.
 //  Originally created as CountryPickerView by Kizito Nwose on 18/09/2017.
 //  Copyright © 2018 NAMSHI. All rights reserved.
 //
@@ -100,6 +100,7 @@ public class NMLocalizedPhoneCountryView: NMNibView {
     @IBOutlet weak var spacingConstraint: NSLayoutConstraint!
     @IBOutlet public weak var flagImageView: UIImageView!
     @IBOutlet public weak var countryDetailsLabel: UILabel!
+    public var jsonCountries: Array<Any>? = nil
     public var localeSetup : NMLocaleSetup = NMLocaleSetup() {
         didSet { setup() }
     }
@@ -213,6 +214,23 @@ public class NMLocalizedPhoneCountryView: NMNibView {
     
     internal func getCountries() -> [NMCountry] {
         var countries = [NMCountry]()
+        if jsonCountries == nil {
+            // get Local Bundle Countries
+            countries = getLocalCountries()
+        } else {
+            // get Countries From the Application
+            countries = getCountriesFrom(self.jsonCountries!)
+            // fallback To Local Countries On Empty Remote Countries
+            if countries.count == 0 {
+                countries = getLocalCountries()
+            }
+        }
+        
+        return countries
+    }
+    
+    private func getLocalCountries() -> [NMCountry] {
+        var countries = [NMCountry]()
         let bundle = Bundle(for: NMLocalizedPhoneCountryView.self)
         guard let jsonPath = bundle.path(forResource: "NMLocalizedPhoneCountryView.bundle/Data/CountryCodes", ofType: "json"),
             let jsonData = try? Data(contentsOf: URL(fileURLWithPath: jsonPath)) else {
@@ -221,31 +239,35 @@ public class NMLocalizedPhoneCountryView: NMNibView {
         
         if let jsonObjects = (try? JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization
             .ReadingOptions.allowFragments)) as? Array<Any> {
-            
-            for jsonObject in jsonObjects {
-                
-                guard let countryObj = jsonObject as? Dictionary<String, Any> else {
-                    continue
-                }
-                guard let name = countryObj["name"] as? String,
-                    let code = countryObj["code"] as? String,
-                    let phoneCode = countryObj["dial_code"] as? String else {
-                        continue
-                }
-                var nameOtherLocale = name
-                if localeSetup.isOtherLocale() {
-                    let key = "name_\(localeSetup.baseLocale)"
-                    if let nameOther = countryObj[key] as? String, nameOther.count > 0 {
-                        nameOtherLocale = nameOther
-                    }
-                }
-                let states = countryObj["states"] as? [NSDictionary]
-                let country = NMCountry(name: name, nameOtherLocale: nameOtherLocale, code: code, phoneCode: phoneCode, states: states, localeSetup: localeSetup)
-                countries.append(country)
-            }
-
+            countries = getCountriesFrom(jsonObjects)
         }
         
+        return countries
+    }
+    
+    private func getCountriesFrom(_ jsonArray : Array<Any>) -> [NMCountry] {
+        var countries = [NMCountry]()
+        for jsonObject in jsonArray {
+            
+            guard let countryObj = jsonObject as? Dictionary<String, Any> else {
+                continue
+            }
+            guard let name = countryObj["name"] as? String,
+                let code = countryObj["code"] as? String,
+                let phoneCode = countryObj["dial_code"] as? String else {
+                    continue
+            }
+            var nameOtherLocale = name
+            if localeSetup.isOtherLocale() {
+                let key = "name_\(localeSetup.baseLocale)"
+                if let nameOther = countryObj[key] as? String, nameOther.count > 0 {
+                    nameOtherLocale = nameOther
+                }
+            }
+            let states = countryObj["states"] as? [NSDictionary]
+            let country = NMCountry(name: name, nameOtherLocale: nameOtherLocale, code: code, phoneCode: phoneCode, states: states, localeSetup: localeSetup)
+            countries.append(country)
+        }
         return countries
     }
 }
