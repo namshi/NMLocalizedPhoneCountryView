@@ -1,6 +1,5 @@
 # NMLocalizedPhoneCountryView
 
-[![Build Status](https://travis-ci.org/namshi/NMLocalizedPhoneCountryView.svg?branch=master)](https://travis-ci.org/namshi/NMLocalizedPhoneCountryView)
 [![Platform](https://img.shields.io/badge/Platform-iOS-00BCD4.svg)](http://cocoapods.org/pods/NMLocalizedPhoneCountryView)
 [![Version](https://img.shields.io/cocoapods/v/NMLocalizedPhoneCountryView.svg?style=flat)](http://cocoapods.org/pods/NMLocalizedPhoneCountryView)
 [![License](https://img.shields.io/badge/License-MIT-8D6E63.svg)](https://github.com/namshi/NMLocalizedPhoneCountryView/blob/master/LICENSE.md)
