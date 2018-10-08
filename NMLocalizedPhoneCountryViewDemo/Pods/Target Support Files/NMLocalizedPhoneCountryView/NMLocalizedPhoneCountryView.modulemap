@@ -1,0 +1,6 @@
+framework module NMLocalizedPhoneCountryView {
+  umbrella header "NMLocalizedPhoneCountryView-umbrella.h"
+
+  export *
+  module * { export * }
+}
