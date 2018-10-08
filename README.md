@@ -8,11 +8,11 @@ NMLocalizedPhoneCountryView is a simple, customizable view for selecting countri
 
 You can clone/download the repository and run the [demo project](https://github.com/namshi/NMLocalizedPhoneCountryView/NMLocalizedPhoneCountryViewDemo) to see `NMLocalizedPhoneCountryView` in action. First run `pod install` from the `NMLocalizedPhoneCountryViewDemo` directory.
 
-<img align="left" src="https://raw.githubusercontent.com/namshi/NMLocalizedPhoneCountryView/v1.0.0/NMLocalizedPhoneCountryViewDemo/Screenshots/1.png" width="300"> 
-<img src="https://raw.githubusercontent.com/namshi/NMLocalizedPhoneCountryView/v1.0.0/NMLocalizedPhoneCountryViewDemo/Screenshots/2.png" width="300"> 
-<img align="left" src="https://raw.githubusercontent.com/namshi/NMLocalizedPhoneCountryView/v1.0.0/NMLocalizedPhoneCountryViewDemo/Screenshots/3.png" width="300"> 
-<img src="https://raw.githubusercontent.com/namshi/NMLocalizedPhoneCountryView/v1.0.0/NMLocalizedPhoneCountryViewDemo/Screenshots/4.png" width="300">
-<img src="https://raw.githubusercontent.com/namshi/NMLocalizedPhoneCountryView/v1.0.0/NMLocalizedPhoneCountryViewDemo/Screenshots/5.png" width="300">
+<img align="left" src="https://raw.githubusercontent.com/namshi/NMLocalizedPhoneCountryView/master/NMLocalizedPhoneCountryViewDemo/Screenshots/1.png" width="300"> 
+<img src="https://raw.githubusercontent.com/namshi/NMLocalizedPhoneCountryView/master/NMLocalizedPhoneCountryViewDemo/Screenshots/2.png" width="300"> 
+<img align="left" src="https://raw.githubusercontent.com/namshi/NMLocalizedPhoneCountryView/master/NMLocalizedPhoneCountryViewDemo/Screenshots/3.png" width="300"> 
+<img src="https://raw.githubusercontent.com/namshi/NMLocalizedPhoneCountryView/master/NMLocalizedPhoneCountryViewDemo/Screenshots/4.png" width="300">
+<img src="https://raw.githubusercontent.com/namshi/NMLocalizedPhoneCountryView/master/NMLocalizedPhoneCountryViewDemo/Screenshots/5.png" width="300">
 
 
 ## Installation
