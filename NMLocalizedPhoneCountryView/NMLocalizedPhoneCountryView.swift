@@ -13,11 +13,16 @@ public enum SearchBarPosition {
     case tableViewHeader, navigationBar, hidden
 }
 
+public enum FontTrait {
+    case normal, bold, italic
+}
+
 public struct NMLocaleSetup {
     internal var baseLocale : String = "Base"
     internal var isRTL : Bool = false
 
-    public init(baseLocale: String = "Base", isRTL: Bool = false) {
+    public init(baseLocale: String = "Base",
+                isRTL: Bool = false) {
         self.baseLocale = baseLocale
         self.isRTL = isRTL
     }
@@ -33,7 +38,9 @@ public struct NMState {
     private var nameOtherLocale: String
     public var code: String
 
-    internal init(name: String, nameOtherLocale: String, code: String) {
+    internal init(name: String,
+                  nameOtherLocale: String,
+                  code: String) {
         self.name = name
         self.nameOtherLocale = nameOtherLocale
         self.code = code
@@ -50,19 +57,32 @@ public struct NMCountry {
     private var nameOtherLocale: String
     public var code: String
     public var phoneCode: String
+    public var postalCode: String = ""
     public var states: [NMState] = []
+    public var carrierCodes: [String] = []
+    private var currentLocale: NMLocaleSetup
     public var flag: UIImage {
 
         return UIImage(named: "NMLocalizedPhoneCountryView.bundle/Images/\(code.uppercased())",
             in: Bundle(for: NMLocalizedPhoneCountryView.self), compatibleWith: nil)!
     }
     
-    internal init(name: String, nameOtherLocale: String, code: String, phoneCode: String, states: [NSDictionary]?, localeSetup: NMLocaleSetup) {
+    internal init(name: String,
+                  nameOtherLocale: String,
+                  countryCode: String,
+                  phoneCode: String,
+                  postalCode: String?,
+                  carrierCodes: [String]?,
+                  states: [NSDictionary]?,
+                  localeSetup: NMLocaleSetup) {
         self.name = name
         self.nameOtherLocale = nameOtherLocale
-        self.code = code
+        self.code = countryCode
         self.phoneCode = phoneCode
+        self.postalCode = postalCode ?? ""
+        self.carrierCodes = []
         self.states = []
+        self.currentLocale = localeSetup
         if let statesList = states {
             for stateObj in statesList {
                 guard let stateName = stateObj["name"] as? String,
@@ -80,11 +100,38 @@ public struct NMCountry {
                 self.states.append(state)
             }
         }
+        if let carrierCodesList = carrierCodes {
+            self.carrierCodes = carrierCodesList
+        }
     }
     
     public func getLocalizedName(locale: NMLocaleSetup) -> String {
 
         return (locale.baseLocale == "Base") ? self.name : self.nameOtherLocale
+    }
+    
+    public func fetchStateForName(_ stateName: String) -> NMState? {
+        var selectedState : NMState? = nil
+        for state in self.states {
+            if stateName == state.getLocalizedName(locale: self.currentLocale) {
+                selectedState = state
+                break
+            }
+        }
+
+        return selectedState
+    }
+    
+    public func fetchStateForCode(stateCode: String) -> NMState? {
+        var selectedState : NMState? = nil
+        for state in self.states {
+            if stateCode == state.code {
+                selectedState = state
+                break
+            }
+        }
+        
+        return selectedState
     }
 }
 
@@ -99,7 +146,7 @@ public func !=(lhs: NMCountry, rhs: NMCountry) -> Bool {
 public class NMLocalizedPhoneCountryView: NMNibView {
     @IBOutlet weak var spacingConstraint: NSLayoutConstraint!
     @IBOutlet public weak var flagImageView: UIImageView!
-    @IBOutlet public weak var countryDetailsLabel: UILabel!
+    @IBOutlet fileprivate weak var countryDetailsLabel: UILabel!
     public var jsonCountries: Array<Any>? = nil
     public var localeSetup : NMLocaleSetup = NMLocaleSetup() {
         didSet { setup() }
@@ -121,14 +168,22 @@ public class NMLocalizedPhoneCountryView: NMNibView {
     }
     
     /// Change the font of phone code
-    public var font = UIFont.systemFont(ofSize: 17.0) {
+    public var normalFont = UIFont.systemFont(ofSize: 17.0) {
         didSet { setup() }
     }
+    
+    /// Set the font trait for selectedCountryView
+    public var selectedCountryFontTrait : FontTrait = .bold {
+        didSet { setup() }
+    }
+    
+    /// Set the font trait for Countries List View Controller
+    public var countriesListFontTrait : FontTrait = .normal
+    
     /// Change the text color of phone code
     public var textColor = UIColor.black {
         didSet { setup() }
     }
-    
     
     /// The spacing between the flag image and the text.
     public var flagSpacingInView: CGFloat {
@@ -170,7 +225,7 @@ public class NMLocalizedPhoneCountryView: NMNibView {
     
     func setup() {
         flagImageView.image = selectedCountry.flag
-        countryDetailsLabel.font = font
+        countryDetailsLabel.font = self.getFontForSymbolicTrait(trait: selectedCountryFontTrait)
         countryDetailsLabel.textColor = textColor
         if showPhoneCodeInView && showCountryCodeInView {
             countryDetailsLabel.text = "(\(selectedCountry.code)) \(selectedCountry.phoneCode)"
@@ -198,6 +253,7 @@ public class NMLocalizedPhoneCountryView: NMNibView {
     public func showCountriesList(from viewController: UIViewController) {
         let countryVc = NMLocalizedPhoneCountryViewController(style: .grouped)
         countryVc.localizedPhoneCountryView = self
+        countryVc.font = self.getFontForSymbolicTrait(trait: countriesListFontTrait)
         if let viewController = viewController as? UINavigationController {
             delegate?.localizedPhoneCountryView(self, willShow: countryVc)
             viewController.pushViewController(countryVc, animated: true) {
@@ -264,11 +320,30 @@ public class NMLocalizedPhoneCountryView: NMNibView {
                     nameOtherLocale = nameOther
                 }
             }
+            var postalCode = ""
+            if let postCode = countryObj["postal_code"] as? String {
+                postalCode = postCode
+            }
             let states = countryObj["states"] as? [NSDictionary]
-            let country = NMCountry(name: name, nameOtherLocale: nameOtherLocale, code: code, phoneCode: phoneCode, states: states, localeSetup: localeSetup)
+            let carrierCodes = countryObj["carrier_codes"] as? [String]
+            let country = NMCountry(name: name, nameOtherLocale: nameOtherLocale, countryCode: code, phoneCode: phoneCode, postalCode: postalCode, carrierCodes: carrierCodes, states: states, localeSetup: localeSetup)
             countries.append(country)
         }
         return countries
+    }
+    
+    private func getFontForSymbolicTrait(trait: FontTrait) -> UIFont {
+        var newFont = normalFont
+        switch trait {
+        case .italic:
+            newFont = UIFont(descriptor: normalFont.fontDescriptor.withSymbolicTraits(.traitItalic)!, size: normalFont.pointSize)
+        case .bold:
+            newFont = UIFont(descriptor: normalFont.fontDescriptor.withSymbolicTraits(.traitBold)!, size: normalFont.pointSize)
+        default:
+            newFont = normalFont
+        }
+
+        return newFont
     }
 }
 

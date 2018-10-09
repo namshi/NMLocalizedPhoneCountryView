@@ -50,8 +50,11 @@ class DemoViewController: UITableViewController {
         }
         
         cpvInternal.delegate = self
-        cpvMain.countryDetailsLabel.font = UIFont.systemFont(ofSize: 20)
-        
+        cpvMain.normalFont = UIFont.systemFont(ofSize: 20)
+        cpvTextField.normalFont = UIFont(name: "Courier", size: 14)!
+        cpvInternal.normalFont = UIFont(name: "Helvetica", size: 14)!
+        cpvTextField.selectedCountryFontTrait = .italic
+
         [showPhoneCodeInView, showCountryCodeInView, localizeCountryCodeInView,
          showPreferredCountries,  showOnlyPreferredCountries].forEach {
             $0.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
@@ -133,7 +136,7 @@ extension DemoViewController: NMLocalizedPhoneCountryViewDelegate {
         // Only countryPickerInternal has it's delegate set
         let title = "Selected Country"
         let name = country.getLocalizedName(locale: localizedPhoneCountryView.localeSetup)
-        let message = "Name: \(name) \nCode: \(country.code) \nPhone: \(country.phoneCode) \nand States: \(country.states.count)"
+        let message = "Name: \(name) \nCode: \(country.code) \nPhone: \(country.phoneCode) \n States: \(country.states.count), \nPostalCode: \(country.postalCode) \nand CarrierCodes: \(country.carrierCodes.count)"
         showAlert(title: title, message: message)
     }
 }
