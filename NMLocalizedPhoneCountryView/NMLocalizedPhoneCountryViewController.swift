@@ -28,6 +28,11 @@ class NMLocalizedPhoneCountryViewController: UITableViewController {
     
     weak var localizedPhoneCountryView: NMLocalizedPhoneCountryView!
     
+    /// Change the font of countries list screen
+    internal var font = UIFont.systemFont(ofSize: 17.0) {
+        didSet { tableView.reloadData() }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setSemanticContentAttribute()
@@ -163,6 +168,7 @@ extension NMLocalizedPhoneCountryViewController {
         let name = localizedPhoneCountryView.showPhoneCodeInList ? "\(countryName) (\(country.phoneCode))" : countryName
         cell.imageView?.image = country.flag
         cell.textLabel?.text = name
+        cell.textLabel?.font = self.font
         cell.accessoryType = country == localizedPhoneCountryView.selectedCountry ? .checkmark : .none
         cell.separatorInset = .zero
         cell.textLabel?.textAlignment = localizedPhoneCountryView.localeSetup.isRTL ? .right : .left
@@ -195,7 +201,7 @@ extension NMLocalizedPhoneCountryViewController {
 
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if let header = view as? UITableViewHeaderFooterView {
-            header.textLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+            header.textLabel?.font = self.font
         }
     }
     

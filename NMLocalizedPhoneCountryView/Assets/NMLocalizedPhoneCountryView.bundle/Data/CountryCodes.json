@@ -3,7 +3,8 @@
 "name": "Afghanistan",
 "name_ar": "أفغانستان",
 "dial_code": "+93",
-"code": "AF"
+"code": "AF",
+"postal_code": "1234"
 },
 {
 "name": "Aland Islands",
@@ -15,13 +16,15 @@
 "name": "Albania",
 "name_ar": "ألبانيا",
 "dial_code": "+355",
-"code": "AL"
+"code": "AL",
+"postal_code": "1234"
 },
 {
 "name": "Algeria",
 "name_ar": "الجزائر",
 "dial_code": "+213",
-"code": "DZ"
+"code": "DZ",
+"postal_code": "12345"
 },
 {
 "name": "AmericanSamoa",
@@ -63,13 +66,15 @@
 "name": "Argentina",
 "name_ar": "الأرجنتين",
 "dial_code": "+54",
-"code": "AR"
+"code": "AR",
+"postal_code": "1234"
 },
 {
 "name": "Armenia",
 "name_ar": "أرمينيا",
 "dial_code": "+374",
-"code": "AM"
+"code": "AM",
+"postal_code": "1234"
 },
 {
 "name": "Aruba",
@@ -81,13 +86,15 @@
 "name": "Australia",
 "name_ar": "أستراليا",
 "dial_code": "+61",
-"code": "AU"
+"code": "AU",
+"postal_code": "1234"
 },
 {
 "name": "Austria",
 "name_ar": "النمسا",
 "dial_code": "+43",
-"code": "AT"
+"code": "AT",
+"postal_code": "1234"
 },
 {
 "name": "Azerbaijan",
@@ -111,7 +118,8 @@
 "name": "Bangladesh",
 "name_ar": "بنغلاديش",
 "dial_code": "+880",
-"code": "BD"
+"code": "BD",
+"postal_code": "1234"
 },
 {
 "name": "Barbados",
@@ -153,7 +161,8 @@
 "name": "Bhutan",
 "name_ar": "بوتان",
 "dial_code": "+975",
-"code": "BT"
+"code": "BT",
+"postal_code": "12345"
 },
 {
 "name": "Bolivia, Plurinational State of",
@@ -165,7 +174,8 @@
 "name": "Bosnia and Herzegovina",
 "name_ar": "البوسنة و الهرسك",
 "dial_code": "+387",
-"code": "BA"
+"code": "BA",
+"postal_code": "12345"
 },
 {
 "name": "Botswana",
@@ -195,7 +205,8 @@
 "name": "Bulgaria",
 "name_ar": "بلغاريا",
 "dial_code": "+359",
-"code": "BG"
+"code": "BG",
+"postal_code": "1234"
 },
 {
 "name": "Burkina Faso",
@@ -213,7 +224,8 @@
 "name": "Cambodia",
 "name_ar": "كمبوديا",
 "dial_code": "+855",
-"code": "KH"
+"code": "KH",
+"postal_code": "12345"
 },
 {
 "name": "Cameroon",
@@ -226,6 +238,8 @@
 "name_ar": "كندا",
 "dial_code": "+1",
 "code": "CA",
+"postal_code": "A1B 2C3",
+"carrier_codes": ["204", "226", "236", "249", "250", "289", "306", "343", "365", "387", "403", "416", "418", "431", "437", "438", "450", "506", "514", "519", "548", "579", "581", "587", "604", "613", "639", "647", "672", "705", "709", "742", "778", "780", "782", "807", "819", "825", "867", "873", "902", "905"],
 "states": [
     {
         "code": "AB",
@@ -298,7 +312,8 @@
 "name": "Cape Verde",
 "name_ar": "الرأس الأخضر",
 "dial_code": "+238",
-"code": "CV"
+"code": "CV",
+"postal_code": "1234"
 },
 {
 "name": "Cayman Islands",
@@ -328,25 +343,29 @@
 "name": "China",
 "name_ar": "جمهورية الصين الشعبية",
 "dial_code": "+86",
-"code": "CN"
+"code": "CN",
+"postal_code": "123456"
 },
 {
 "name": "Christmas Island",
 "name_ar": "جزيرة الكريسماس",
 "dial_code": "+61",
-"code": "CX"
+"code": "CX",
+"postal_code": "1234"
 },
 {
 "name": "Cocos (Keeling) Islands",
 "name_ar": "جزر كوكوس (كيلينغ)",
 "dial_code": "+61",
-"code": "CC"
+"code": "CC",
+"postal_code": "1234"
 },
 {
 "name": "Colombia",
 "name_ar": "كولومبيا",
 "dial_code": "+57",
-"code": "CO"
+"code": "CO",
+"postal_code": "123456"
 },
 {
 "name": "Comoros",
@@ -376,7 +395,8 @@
 "name": "Costa Rica",
 "name_ar": "كوستا ريكا",
 "dial_code": "+506",
-"code": "CR"
+"code": "CR",
+"postal_code": "12345"
 },
 {
 "name": "Cote d'Ivoire",
@@ -388,31 +408,36 @@
 "name": "Croatia",
 "name_ar": "كرواتيا",
 "dial_code": "+385",
-"code": "HR"
+"code": "HR",
+"postal_code": "12345"
 },
 {
 "name": "Cuba",
 "name_ar": "كوبا",
 "dial_code": "+53",
-"code": "CU"
+"code": "CU",
+"postal_code": "12345"
 },
 {
 "name": "Cyprus",
 "name_ar": "قبرص",
 "dial_code": "+357",
-"code": "CY"
+"code": "CY",
+"postal_code": "1234"
 },
 {
 "name": "Czech Republic",
 "name_ar": "الجمهورية التشيكية",
 "dial_code": "+420",
-"code": "CZ"
+"code": "CZ",
+"postal_code": "123 45"
 },
 {
 "name": "Denmark",
 "name_ar": "الدانمارك",
 "dial_code": "+45",
-"code": "DK"
+"code": "DK",
+"postal_code": "1234"
 },
 {
 "name": "Djibouti",
@@ -430,25 +455,30 @@
 "name": "Dominican Republic",
 "name_ar": "جمهورية الدومنيكان",
 "dial_code": "+1849",
-"code": "DO"
+"code": "DO",
+"postal_code": "1234",
+"carrier_codes": ["809", "829", "849"]
 },
 {
 "name": "Ecuador",
 "name_ar": "الإكوادور",
 "dial_code": "+593",
-"code": "EC"
+"code": "EC",
+"postal_code": "123456"
 },
 {
 "name": "Egypt",
 "name_ar": "مصر",
 "dial_code": "+20",
-"code": "EG"
+"code": "EG",
+"postal_code": "12345"
 },
 {
 "name": "El Salvador",
 "name_ar": "السلفادور",
 "dial_code": "+503",
-"code": "SV"
+"code": "SV",
+"postal_code": "1234"
 },
 {
 "name": "Equatorial Guinea",
@@ -472,7 +502,8 @@
 "name": "Ethiopia",
 "name_ar": "أثيوبيا",
 "dial_code": "+251",
-"code": "ET"
+"code": "ET",
+"postal_code": "1234"
 },
 {
 "name": "Falkland Islands (Malvinas)",
@@ -496,13 +527,15 @@
 "name": "Finland",
 "name_ar": "فنلندا",
 "dial_code": "+358",
-"code": "FI"
+"code": "FI",
+"postal_code": "12345"
 },
 {
 "name": "France",
 "name_ar": "فرنسا",
 "dial_code": "+33",
-"code": "FR"
+"code": "FR",
+"postal_code": "12345"
 },
 {
 "name": "French Guiana",
@@ -532,13 +565,15 @@
 "name": "Georgia",
 "name_ar": "جيورجيا",
 "dial_code": "+995",
-"code": "GE"
+"code": "GE",
+"postal_code": "1234"
 },
 {
 "name": "Germany",
 "name_ar": "ألمانيا",
 "dial_code": "+49",
-"code": "DE"
+"code": "DE",
+"postal_code": "12345"
 },
 {
 "name": "Ghana",
@@ -556,7 +591,8 @@
 "name": "Greece",
 "name_ar": "اليونان",
 "dial_code": "+30",
-"code": "GR"
+"code": "GR",
+"postal_code": "123 45"
 },
 {
 "name": "Greenland",
@@ -586,7 +622,8 @@
 "name": "Guatemala",
 "name_ar": "غواتيمالا",
 "dial_code": "+502",
-"code": "GT"
+"code": "GT",
+"postal_code": "12345"
 },
 {
 "name": "Guernsey",
@@ -598,13 +635,15 @@
 "name": "Guinea",
 "name_ar": "غينيا",
 "dial_code": "+224",
-"code": "GN"
+"code": "GN",
+"postal_code": "123"
 },
 {
 "name": "Guinea-Bissau",
 "name_ar": "غينيا بيساو",
 "dial_code": "+245",
-"code": "GW"
+"code": "GW",
+"postal_code": "1234"
 },
 {
 "name": "Guyana",
@@ -616,7 +655,8 @@
 "name": "Haiti",
 "name_ar": "هايتي",
 "dial_code": "+509",
-"code": "HT"
+"code": "HT",
+"postal_code": "1234"
 },
 {
 "name": "Holy See (Vatican City State)",
@@ -640,13 +680,15 @@
 "name": "Hungary",
 "name_ar": "المجر",
 "dial_code": "+36",
-"code": "HU"
+"code": "HU",
+"postal_code": "1234"
 },
 {
 "name": "Iceland",
 "name_ar": "آيسلندا",
 "dial_code": "+354",
-"code": "IS"
+"code": "IS",
+"postal_code": "123"
 },
 {
 "name": "India",
@@ -658,19 +700,22 @@
 "name": "Indonesia",
 "name_ar": "أندونيسيا",
 "dial_code": "+62",
-"code": "ID"
+"code": "ID",
+"postal_code": "12345"
 },
 {
 "name": "Iran, Islamic Republic of Persian Gulf",
 "name_ar": "إيران ، جمهورية إيران الإسلامية",
 "dial_code": "+98",
-"code": "IR"
+"code": "IR",
+"postal_code": "1234567890"
 },
 {
 "name": "Iraq",
 "name_ar": "العراق",
 "dial_code": "+964",
-"code": "IQ"
+"code": "IQ",
+"postal_code": "12345"
 },
 {
 "name": "Ireland",
@@ -688,25 +733,30 @@
 "name": "Israel",
 "name_ar": "إسرائيل",
 "dial_code": "+972",
-"code": "IL"
+"code": "IL",
+"postal_code": "1234567"
 },
 {
 "name": "Italy",
 "name_ar": "إيطاليا",
 "dial_code": "+39",
-"code": "IT"
+"code": "IT",
+"postal_code": "12345"
 },
 {
 "name": "Jamaica",
 "name_ar": "جامايكا",
 "dial_code": "+1876",
-"code": "JM"
+"code": "JM",
+"postal_code": "12"
+"carrier_codes": ["876", "658"]
 },
 {
 "name": "Japan",
 "name_ar": "اليابان",
 "dial_code": "+81",
-"code": "JP"
+"code": "JP",
+"postal_code": "123-4567"
 },
 {
 "name": "Jersey",
@@ -718,19 +768,22 @@
 "name": "Jordan",
 "name_ar": "الأردن",
 "dial_code": "+962",
-"code": "JO"
+"code": "JO",
+"postal_code": "12345"
 },
 {
 "name": "Kazakhstan",
 "name_ar": "كازاخستان",
 "dial_code": "+7",
-"code": "KZ"
+"code": "KZ",
+"postal_code": "123456"
 },
 {
 "name": "Kenya",
 "name_ar": "كينيا",
 "dial_code": "+254",
-"code": "KE"
+"code": "KE",
+"postal_code": "12345"
 },
 {
 "name": "Kiribati",
@@ -748,19 +801,22 @@
 "name": "Korea, Republic of South Korea",
 "name_ar": "كوريا الجنوبية",
 "dial_code": "+82",
-"code": "KR"
+"code": "KR",
+"postal_code": "12345"
 },
 {
 "name": "Kuwait",
 "name_ar": "الكويت",
 "dial_code": "+965",
-"code": "KW"
+"code": "KW",
+"postal_code": "12345"
 },
 {
 "name": "Kyrgyzstan",
 "name_ar": "قرغيزستان",
 "dial_code": "+996",
-"code": "KG"
+"code": "KG",
+"postal_code": "123456"
 },
 {
 "name": "Laos",
@@ -784,13 +840,15 @@
 "name": "Lesotho",
 "name_ar": "ليسوتو",
 "dial_code": "+266",
-"code": "LS"
+"code": "LS",
+"postal_code": "123"
 },
 {
 "name": "Liberia",
 "name_ar": "ليبيريا",
 "dial_code": "+231",
-"code": "LR"
+"code": "LR",
+"postal_code": "1234"
 },
 {
 "name": "Libyan Arab Jamahiriya",
@@ -814,7 +872,8 @@
 "name": "Luxembourg",
 "name_ar": "لوكسمبورغ",
 "dial_code": "+352",
-"code": "LU"
+"code": "LU",
+"postal_code": "1234"
 },
 {
 "name": "Macao",
@@ -844,13 +903,15 @@
 "name": "Malaysia",
 "name_ar": "ماليزيا",
 "dial_code": "+60",
-"code": "MY"
+"code": "MY",
+"postal_code": "12345"
 },
 {
 "name": "Maldives",
 "name_ar": "جزر المالديف",
 "dial_code": "+960",
-"code": "MV"
+"code": "MV",
+"postal_code": "12345"
 },
 {
 "name": "Mali",
@@ -862,7 +923,8 @@
 "name": "Malta",
 "name_ar": "مالطا",
 "dial_code": "+356",
-"code": "MT"
+"code": "MT",
+"postal_code": "ABC 1234"
 },
 {
 "name": "Marshall Islands",
@@ -886,7 +948,8 @@
 "name": "Mauritius",
 "name_ar": "موريشيوس",
 "dial_code": "+230",
-"code": "MU"
+"code": "MU",
+"postal_code": "12345"
 },
 {
 "name": "Mayotte",
@@ -898,7 +961,8 @@
 "name": "Mexico",
 "name_ar": "المكسيك",
 "dial_code": "+52",
-"code": "MX"
+"code": "MX",
+"postal_code": "12345"
 },
 {
 "name": "Micronesia, Federated States of Micronesia",
@@ -922,13 +986,15 @@
 "name": "Mongolia",
 "name_ar": "منغوليا",
 "dial_code": "+976",
-"code": "MN"
+"code": "MN",
+"postal_code": "12345"
 },
 {
 "name": "Montenegro",
 "name_ar": "",
 "dial_code": "+382",
-"code": "ME"
+"code": "ME",
+"postal_code": "12345"
 },
 {
 "name": "Montserrat",
@@ -940,19 +1006,22 @@
 "name": "Morocco",
 "name_ar": "المغرب",
 "dial_code": "+212",
-"code": "MA"
+"code": "MA",
+"postal_code": "12345"
 },
 {
 "name": "Mozambique",
 "name_ar": "موزمبيق",
 "dial_code": "+258",
-"code": "MZ"
+"code": "MZ",
+"postal_code": "1234"
 },
 {
 "name": "Myanmar",
 "name_ar": "ميانمار",
 "dial_code": "+95",
-"code": "MM"
+"code": "MM",
+"postal_code": "12345"
 },
 {
 "name": "Namibia",
@@ -970,7 +1039,8 @@
 "name": "Nepal",
 "name_ar": "نيبال",
 "dial_code": "+977",
-"code": "NP"
+"code": "NP",
+"postal_code": "12345"
 },
 {
 "name": "Netherlands",
@@ -994,7 +1064,8 @@
 "name": "New Zealand",
 "name_ar": "نيوزيلندا",
 "dial_code": "+64",
-"code": "NZ"
+"code": "NZ",
+"postal_code": "1234"
 },
 {
 "name": "Nicaragua",
@@ -1006,13 +1077,15 @@
 "name": "Niger",
 "name_ar": "النيجر",
 "dial_code": "+227",
-"code": "NE"
+"code": "NE",
+"postal_code": "1234"
 },
 {
 "name": "Nigeria",
 "name_ar": "نيجيريا",
 "dial_code": "+234",
-"code": "NG"
+"code": "NG",
+"postal_code": "123456"
 },
 {
 "name": "Niue",
@@ -1036,19 +1109,22 @@
 "name": "Norway",
 "name_ar": "النرويج",
 "dial_code": "+47",
-"code": "NO"
+"code": "NO",
+"postal_code": "1234"
 },
 {
 "name": "Oman",
 "name_ar": "عمان",
 "dial_code": "+968",
-"code": "OM"
+"code": "OM",
+"postal_code": "123"
 },
 {
 "name": "Pakistan",
 "name_ar": "باكستان",
 "dial_code": "+92",
-"code": "PK"
+"code": "PK",
+"postal_code": "12345"
 },
 {
 "name": "Palau",
@@ -1060,13 +1136,15 @@
 "name": "Palestinian Territory, Occupied",
 "name_ar": "الأراضي الفلسطينية المحتلة",
 "dial_code": "+970",
-"code": "PS"
+"code": "PS",
+"postal_code": "123"
 },
 {
 "name": "Panama",
 "name_ar": "بناما",
 "dial_code": "+507",
-"code": "PA"
+"code": "PA",
+"postal_code": "1234"
 },
 {
 "name": "Papua New Guinea",
@@ -1078,7 +1156,8 @@
 "name": "Paraguay",
 "name_ar": "باراغواي",
 "dial_code": "+595",
-"code": "PY"
+"code": "PY",
+"postal_code": "1234"
 },
 {
 "name": "Peru",
@@ -1090,7 +1169,8 @@
 "name": "Philippines",
 "name_ar": "الفليبين",
 "dial_code": "+63",
-"code": "PH"
+"code": "PH",
+"postal_code": "1234"
 },
 {
 "name": "Pitcairn",
@@ -1102,19 +1182,22 @@
 "name": "Poland",
 "name_ar": "بولندا",
 "dial_code": "+48",
-"code": "PL"
+"code": "PL",
+"postal_code": "12-345"
 },
 {
 "name": "Portugal",
 "name_ar": "البرتغال",
 "dial_code": "+351",
-"code": "PT"
+"code": "PT",
+"postal_code": "1234"
 },
 {
 "name": "Puerto Rico",
 "name_ar": "بورتوريكو",
 "dial_code": "+1939",
-"code": "PR"
+"code": "PR",
+"carrier_codes": ["787", "939"]
 },
 {
 "name": "Qatar",
@@ -1126,13 +1209,15 @@
 "name": "Romania",
 "name_ar": "رومانيا",
 "dial_code": "+40",
-"code": "RO"
+"code": "RO",
+"postal_code": "123456"
 },
 {
 "name": "Russia",
 "name_ar": "روس",
 "dial_code": "+7",
-"code": "RU"
+"code": "RU",
+"postal_code": "123456"
 },
 {
 "name": "Rwanda",
@@ -1216,13 +1301,15 @@
 "name": "Senegal",
 "name_ar": "السنغال",
 "dial_code": "+221",
-"code": "SN"
+"code": "SN",
+"postal_code": "12345"
 },
 {
 "name": "Serbia",
 "name_ar": "صربيا",
 "dial_code": "+381",
-"code": "RS"
+"code": "RS",
+"postal_code": "12345"
 },
 {
 "name": "Seychelles",
@@ -1246,7 +1333,8 @@
 "name": "Slovakia",
 "name_ar": "سلوفاكيا",
 "dial_code": "+421",
-"code": "SK"
+"code": "SK",
+"postal_code": "123 45"
 },
 {
 "name": "Slovenia",
@@ -1264,13 +1352,15 @@
 "name": "Somalia",
 "name_ar": "الصومال",
 "dial_code": "+252",
-"code": "SO"
+"code": "SO",
+"postal_code": "AB 12345"
 },
 {
 "name": "South Africa",
 "name_ar": "جنوب أفريقيا",
 "dial_code": "+27",
-"code": "ZA"
+"code": "ZA",
+"postal_code": "1234"
 },
 {
 "name": "South Sudan",
@@ -1288,19 +1378,22 @@
 "name": "Spain",
 "name_ar": "إسبانيا",
 "dial_code": "+34",
-"code": "ES"
+"code": "ES",
+"postal_code": "12345"
 },
 {
 "name": "Sri Lanka",
 "name_ar": "سريلانكا",
 "dial_code": "+94",
-"code": "LK"
+"code": "LK",
+"postal_code": "12345"
 },
 {
 "name": "Sudan",
 "name_ar": "سودان",
 "dial_code": "+249",
-"code": "SD"
+"code": "SD",
+"postal_code": "12345"
 },
 {
 "name": "Suriname",
@@ -1318,19 +1411,22 @@
 "name": "Swaziland",
 "name_ar": "سوازيلاند",
 "dial_code": "+268",
-"code": "SZ"
+"code": "SZ",
+"postal_code": "A123"
 },
 {
 "name": "Sweden",
 "name_ar": "السويد",
 "dial_code": "+46",
-"code": "SE"
+"code": "SE",
+"postal_code": "123 45"
 },
 {
 "name": "Switzerland",
 "name_ar": "سويسرا",
 "dial_code": "+41",
-"code": "CH"
+"code": "CH",
+"postal_code": "1234"
 },
 {
 "name": "Syrian Arab Republic",
@@ -1348,19 +1444,22 @@
 "name": "Tajikistan",
 "name_ar": "طاجيكستان",
 "dial_code": "+992",
-"code": "TJ"
+"code": "TJ",
+"postal_code": "123456"
 },
 {
 "name": "Tanzania, United Republic of Tanzania",
 "name_ar": "تنزانيا ، جمهورية تنزانيا المتحدة",
 "dial_code": "+255",
-"code": "TZ"
+"code": "TZ",
+"postal_code": "12345"
 },
 {
 "name": "Thailand",
 "name_ar": "تايلندا",
 "dial_code": "+66",
-"code": "TH"
+"code": "TH",
+"postal_code": "12345"
 },
 {
 "name": "Timor-Leste",
@@ -1390,25 +1489,29 @@
 "name": "Trinidad and Tobago",
 "name_ar": "ترينداد وتوباغو",
 "dial_code": "+1868",
-"code": "TT"
+"code": "TT",
+"postal_code": "123456"
 },
 {
 "name": "Tunisia",
 "name_ar": "تونس",
 "dial_code": "+216",
-"code": "TN"
+"code": "TN",
+"postal_code": "1234"
 },
 {
 "name": "Turkey",
 "name_ar": "تركيا",
 "dial_code": "+90",
-"code": "TR"
+"code": "TR",
+"postal_code": "12345"
 },
 {
 "name": "Turkmenistan",
 "name_ar": "تركمانستان",
 "dial_code": "+993",
-"code": "TM"
+"code": "TM",
+"postal_code": "123456"
 },
 {
 "name": "Turks and Caicos Islands",
@@ -1432,7 +1535,8 @@
 "name": "Ukraine",
 "name_ar": "أوكرانيا",
 "dial_code": "+380",
-"code": "UA"
+"code": "UA",
+"postal_code": "12345"
 },
 {
 "name": "United Arab Emirates",
@@ -1451,6 +1555,7 @@
 "name_ar": "الولايات المتحدة",
 "dial_code": "+1",
 "code": "US",
+"postal_code": "12345",
 "states": [
     {
         "code": "AL",
@@ -1753,13 +1858,15 @@
 "name": "Uruguay",
 "name_ar": "أوروغواي",
 "dial_code": "+598",
-"code": "UY"
+"code": "UY",
+"postal_code": "12345"
 },
 {
 "name": "Uzbekistan",
 "name_ar": "أوزبكستان",
 "dial_code": "+998",
-"code": "UZ"
+"code": "UZ",
+"postal_code": "123456"
 },
 {
 "name": "Vanuatu",
@@ -1777,7 +1884,8 @@
 "name": "Vietnam",
 "name_ar": "فيتنام",
 "dial_code": "+84",
-"code": "VN"
+"code": "VN",
+"postal_code": "123456"
 },
 {
 "name": "Virgin Islands, British",
@@ -1807,7 +1915,8 @@
 "name": "Zambia",
 "name_ar": "زامبيا",
 "dial_code": "+260",
-"code": "ZM"
+"code": "ZM",
+"postal_code": "12345"
 },
 {
 "name": "Zimbabwe",

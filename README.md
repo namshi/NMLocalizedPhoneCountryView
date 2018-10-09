@@ -70,6 +70,24 @@ let statesCount = cpv.selectedCountry.states.count
 print("statesCount \(statesCount)")
 ```
 
+#### Carrier-codes of selected country
+
+You can also create see the carrier codes of your selected country, if any. The default is empty carrier codes array.
+
+```swift
+let carrierCodesCount = cpv.selectedCountry.carrierCodes.count
+print("carrierCodesCount \(carrierCodesCount)")
+```
+
+#### Postal code of selected country
+
+You can also see the Postal Code format for your selected country, if any. The default value is empty string.
+
+```swift
+let postalCodeFormat = cpv.selectedCountry.postalCode
+print("postalCodeFormat \(postalCodeFormat)")
+```
+
 #### Changing locale of countries view
 
 Change your app locale using 
@@ -93,7 +111,10 @@ e.g.
     "name_ar": "الإمارات",
     "name_fr" : "Emirats Arabes Unis",  ---->> New locale
     "dial_code": "+971",
-    "code": "AE"
+    "code": "AE",
+    "postal_code": "",
+    "carrier_codes": [],
+    "states": []
 }
 ```
 ####  2. Use your list of countries 
@@ -106,6 +127,8 @@ If the response format of your custom-countries-API is not correct, or it has wr
 "name_ar": "الإمارات",
 "dial_code": "+971",
 "code": "AE",
+"postal_code": "",
+"carrier_codes": [],
 "states": []
 }
 ```
@@ -200,7 +223,19 @@ The datasource functions define the internal(country list) ViewController's beha
   ```swift    
     func showPhoneCodeInList(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> Bool 
   ```
-
+  
+  #### FontTrait
+  
+  Define normal font family for your `NMLocalizedPhoneCountryView` and define `FontTrait` for your `UILabel`s inside `NMLocalizedPhoneCountryView` and `NMLocalizedPhoneCountryViewController` rows. Simplify override the values for  `selectedCountryFontTrait` and `countriesListFontTrait` for `NMLocalizedPhoneCountryView` and `NMLocalizedPhoneCountryViewController` respectively.
+  
+  Possible values for  `FontTrait` are:
+  
+```
+  public enum FontTrait {
+    case normal, bold, italic
+  }
+```
+  
 ### Using NMLocalizedPhoneCountryView with UITextField
 
 A good use case for `NMLocalizedPhoneCountryView` is when used as the left view of a phone number input field. 
