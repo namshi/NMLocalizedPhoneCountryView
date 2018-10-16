@@ -136,7 +136,7 @@ extension DemoViewController: NMLocalizedPhoneCountryViewDelegate {
         // Only countryPickerInternal has it's delegate set
         let title = "Selected Country"
         let name = country.getLocalizedName(locale: localizedPhoneCountryView.localeSetup)
-        let message = "Name: \(name) \nCode: \(country.code) \nPhone: \(country.phoneCode) \n States: \(country.states.count), \nPostalCode: \(country.postalCode) \nand CarrierCodes: \(country.carrierCodes.count)"
+        let message = "Name: \(name) \nCode: \(country.code) \nPhone: \(country.phoneCode) \n States: \(country.states.count), \nPostalCode Example format: \(country.postalCode) \nand CarrierCodes: \(country.carrierCodes.count)"
         showAlert(title: title, message: message)
     }
 }

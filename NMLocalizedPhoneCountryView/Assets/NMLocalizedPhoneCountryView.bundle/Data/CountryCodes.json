@@ -131,13 +131,15 @@
 "name": "Belarus",
 "name_ar": "روسيا البيضاء",
 "dial_code": "+375",
-"code": "BY"
+"code": "BY",
+"postal_code": "123456"
 },
 {
 "name": "Belgium",
 "name_ar": "بلجيكا",
 "dial_code": "+32",
-"code": "BE"
+"code": "BE",
+"postal_code": "1234"
 },
 {
 "name": "Belize",
@@ -199,7 +201,8 @@
 "name": "Brunei Darussalam",
 "name_ar": "بروناي",
 "dial_code": "+673",
-"code": "BN"
+"code": "BN",
+"postal_code": "AB1234"
 },
 {
 "name": "Bulgaria",
@@ -337,7 +340,8 @@
 "name": "Chile",
 "name_ar": "تشيلي",
 "dial_code": "+56",
-"code": "CL"
+"code": "CL",
+"postal_code": "1234567"
 },
 {
 "name": "China",
@@ -456,7 +460,7 @@
 "name_ar": "جمهورية الدومنيكان",
 "dial_code": "+1849",
 "code": "DO",
-"postal_code": "1234",
+"postal_code": "12345",
 "carrier_codes": ["809", "829", "849"]
 },
 {
@@ -496,7 +500,8 @@
 "name": "Estonia",
 "name_ar": "استونيا",
 "dial_code": "+372",
-"code": "EE"
+"code": "EE",
+"postal_code": "12345"
 },
 {
 "name": "Ethiopia",
@@ -515,7 +520,8 @@
 "name": "Faroe Islands",
 "name_ar": "جزر صناعية",
 "dial_code": "+298",
-"code": "FO"
+"code": "FO",
+"postal_code": "123"
 },
 {
 "name": "Fiji",
@@ -598,7 +604,8 @@
 "name": "Greenland",
 "name_ar": "الأرض الخضراء",
 "dial_code": "+299",
-"code": "GL"
+"code": "GL",
+"postal_code": "1234"
 },
 {
 "name": "Grenada",
@@ -668,7 +675,8 @@
 "name": "Honduras",
 "name_ar": "هندوراس",
 "dial_code": "+504",
-"code": "HN"
+"code": "HN",
+"postal_code": "AB1234"
 },
 {
 "name": "Hong Kong",
@@ -694,7 +702,8 @@
 "name": "India",
 "name_ar": "الهند",
 "dial_code": "+91",
-"code": "IN"
+"code": "IN",
+"postal_code": "123456"
 },
 {
 "name": "Indonesia",
@@ -822,7 +831,8 @@
 "name": "Laos",
 "name_ar": "لاوس",
 "dial_code": "+856",
-"code": "LA"
+"code": "LA",
+"postal_code": "12345"
 },
 {
 "name": "Latvia",
@@ -860,7 +870,8 @@
 "name": "Liechtenstein",
 "name_ar": "ليختنشتين",
 "dial_code": "+423",
-"code": "LI"
+"code": "LI",
+"postal_code": "1234"
 },
 {
 "name": "Lithuania",
@@ -885,13 +896,15 @@
 "name": "Macedonia",
 "name_ar": "جمهورية مقدونيا",
 "dial_code": "+389",
-"code": "MK"
+"code": "MK",
+"postal_code": "1234"
 },
 {
 "name": "Madagascar",
 "name_ar": "مدغشقر",
 "dial_code": "+261",
-"code": "MG"
+"code": "MG",
+"postal_code": "123"
 },
 {
 "name": "Malawi",
@@ -930,7 +943,8 @@
 "name": "Marshall Islands",
 "name_ar": "جزر مارشال",
 "dial_code": "+692",
-"code": "MH"
+"code": "MH",
+"postal_code": "12345-6789"
 },
 {
 "name": "Martinique",
@@ -968,7 +982,8 @@
 "name": "Micronesia, Federated States of Micronesia",
 "name_ar": "ميكرونيزيا ، ولايات ميكرونيزيا الموحدة",
 "dial_code": "+691",
-"code": "FM"
+"code": "FM",
+"postal_code": "12345-6789"
 },
 {
 "name": "Moldova",
@@ -1071,7 +1086,8 @@
 "name": "Nicaragua",
 "name_ar": "نيكاراغوا",
 "dial_code": "+505",
-"code": "NI"
+"code": "NI",
+"postal_code": "12345"
 },
 {
 "name": "Niger",
@@ -1097,13 +1113,15 @@
 "name": "Norfolk Island",
 "name_ar": "جزيرة نورفولك",
 "dial_code": "+672",
-"code": "NF"
+"code": "NF",
+"postal_code": "1234"
 },
 {
 "name": "Northern Mariana Islands",
 "name_ar": "جزر مريانا الشمالية",
 "dial_code": "+1670",
-"code": "MP"
+"code": "MP",
+"postal_code": "12345-6789"
 },
 {
 "name": "Norway",
@@ -1130,7 +1148,8 @@
 "name": "Palau",
 "name_ar": "بالاو",
 "dial_code": "+680",
-"code": "PW"
+"code": "PW",
+"postal_code": "12345-6789"
 },
 {
 "name": "Palestinian Territory, Occupied",
@@ -1150,7 +1169,8 @@
 "name": "Papua New Guinea",
 "name_ar": "بابوا غينيا الجديدة",
 "dial_code": "+675",
-"code": "PG"
+"code": "PG",
+"postal_code": "123"
 },
 {
 "name": "Paraguay",
@@ -1163,7 +1183,8 @@
 "name": "Peru",
 "name_ar": "بيرو",
 "dial_code": "+51",
-"code": "PE"
+"code": "PE",
+"postal_code": "12345"
 },
 {
 "name": "Philippines",
@@ -1190,13 +1211,14 @@
 "name_ar": "البرتغال",
 "dial_code": "+351",
 "code": "PT",
-"postal_code": "1234"
+"postal_code": "1234-567"
 },
 {
 "name": "Puerto Rico",
 "name_ar": "بورتوريكو",
 "dial_code": "+1939",
 "code": "PR",
+"postal_code": "12345-6789",
 "carrier_codes": ["787", "939"]
 },
 {
@@ -1295,7 +1317,8 @@
 "name": "Saudi Arabia",
 "name_ar": "السعودية",
 "dial_code": "+966",
-"code": "SA"
+"code": "SA",
+"postal_code": "12345-6789"
 },
 {
 "name": "Senegal",
@@ -1327,7 +1350,8 @@
 "name": "Singapore",
 "name_ar": "سنغافورة",
 "dial_code": "+65",
-"code": "SG"
+"code": "SG",
+"postal_code": "123456"
 },
 {
 "name": "Slovakia",
@@ -1340,7 +1364,8 @@
 "name": "Slovenia",
 "name_ar": "سلوفينيا",
 "dial_code": "+386",
-"code": "SI"
+"code": "SI",
+"postal_code": "1234"
 },
 {
 "name": "Solomon Islands",
@@ -1438,7 +1463,8 @@
 "name": "Taiwan",
 "name_ar": "تايوان",
 "dial_code": "+886",
-"code": "TW"
+"code": "TW",
+"postal_code": "123-45"
 },
 {
 "name": "Tajikistan",
@@ -1555,7 +1581,7 @@
 "name_ar": "الولايات المتحدة",
 "dial_code": "+1",
 "code": "US",
-"postal_code": "12345",
+"postal_code": "12345-6789",
 "states": [
     {
         "code": "AL",
@@ -1878,7 +1904,8 @@
 "name": "Venezuela, Bolivarian Republic of Venezuela",
 "name_ar": "فنزويلا ، جمهورية فنزويلا البوليفارية",
 "dial_code": "+58",
-"code": "VE"
+"code": "VE",
+"postal_code": "1234-A"
 },
 {
 "name": "Vietnam",
@@ -1891,7 +1918,8 @@
 "name": "Virgin Islands, British",
 "name_ar": "جزر العذراء البريطانية",
 "dial_code": "+1284",
-"code": "VG"
+"code": "VG",
+"postal_code": "12345-6789"
 },
 {
 "name": "Virgin Islands, U.S.",
