@@ -177,7 +177,7 @@ extension NMLocalizedPhoneCountryViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return isSearchMode ? nil : sectionsTitles[section]
+        return isSearchMode ? nil : sectionsTitles[section].uppercased()
     }
     
     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
@@ -228,20 +228,20 @@ extension NMLocalizedPhoneCountryViewController {
 extension NMLocalizedPhoneCountryViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         isSearchMode = false
-        if let text = searchController.searchBar.text, text.count > 0 {
+        if let text = searchController.searchBar.text?.lowercased(), text.count > 0 {
             isSearchMode = true
             searchResults.removeAll()
             
             var indexArray = [NMCountry]()
-            
+
             if showOnlyPreferredSection && hasPreferredSection,
                 let array = countries[localizedPhoneCountryView.preferredCountriesSectionTitle!] {
                 indexArray = array
-            } else if let array = countries[String(text[text.startIndex])] {
+            } else if let array = countries[String(text[text.startIndex]).uppercased()] {
                 indexArray = array
             }
 
-            searchResults.append(contentsOf: indexArray.filter({ $0.getLocalizedName(locale: localizedPhoneCountryView.localeSetup).hasPrefix(text) }))
+            searchResults.append(contentsOf: indexArray.filter({ $0.getLocalizedName(locale: localizedPhoneCountryView.localeSetup).lowercased().hasPrefix(text) }))
         }
         tableView.reloadData()
     }
