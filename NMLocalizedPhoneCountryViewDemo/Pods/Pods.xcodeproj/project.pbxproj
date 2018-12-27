@@ -398,71 +398,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		05AD066CE1F7B81B844F9E45D195B4EB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E1F31C51F4162B924B489255421AFD1 /* NMLocalizedPhoneCountryView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/NMLocalizedPhoneCountryView/NMLocalizedPhoneCountryView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NMLocalizedPhoneCountryView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/NMLocalizedPhoneCountryView/NMLocalizedPhoneCountryView.modulemap";
-				PRODUCT_MODULE_NAME = NMLocalizedPhoneCountryView;
-				PRODUCT_NAME = NMLocalizedPhoneCountryView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		1415A51EB22ACAF641AAA1703B91F564 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E1F31C51F4162B924B489255421AFD1 /* NMLocalizedPhoneCountryView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/NMLocalizedPhoneCountryView/NMLocalizedPhoneCountryView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/NMLocalizedPhoneCountryView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/NMLocalizedPhoneCountryView/NMLocalizedPhoneCountryView.modulemap";
-				PRODUCT_MODULE_NAME = NMLocalizedPhoneCountryView;
-				PRODUCT_NAME = NMLocalizedPhoneCountryView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		199D972A13F2B4C56847F7A89CCA83BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -542,6 +477,39 @@
 			};
 			name = Release;
 		};
+		38A1302781F17A302D0F5A6EF831584B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E1F31C51F4162B924B489255421AFD1 /* NMLocalizedPhoneCountryView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NMLocalizedPhoneCountryView/NMLocalizedPhoneCountryView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NMLocalizedPhoneCountryView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NMLocalizedPhoneCountryView/NMLocalizedPhoneCountryView.modulemap";
+				PRODUCT_MODULE_NAME = NMLocalizedPhoneCountryView;
+				PRODUCT_NAME = NMLocalizedPhoneCountryView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		513AF549856D1D1304B2CC1CB2B50212 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F408AB64348CB19FC2D96401D46D1805 /* Pods-NMLocalizedPhoneCountryViewDemo.debug.xcconfig */;
@@ -590,6 +558,38 @@
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		9C739BDF57A437AEEF71198F66D8CAD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E1F31C51F4162B924B489255421AFD1 /* NMLocalizedPhoneCountryView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NMLocalizedPhoneCountryView/NMLocalizedPhoneCountryView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NMLocalizedPhoneCountryView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NMLocalizedPhoneCountryView/NMLocalizedPhoneCountryView.modulemap";
+				PRODUCT_MODULE_NAME = NMLocalizedPhoneCountryView;
+				PRODUCT_NAME = NMLocalizedPhoneCountryView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -701,8 +701,8 @@
 		27D1043FC4A6F15B169FAD731F646053 /* Build configuration list for PBXNativeTarget "NMLocalizedPhoneCountryView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1415A51EB22ACAF641AAA1703B91F564 /* Debug */,
-				05AD066CE1F7B81B844F9E45D195B4EB /* Release */,
+				9C739BDF57A437AEEF71198F66D8CAD6 /* Debug */,
+				38A1302781F17A302D0F5A6EF831584B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
