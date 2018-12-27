@@ -1,5 +1,5 @@
 PODS:
-  - NMLocalizedPhoneCountryView (1.0.2)
+  - NMLocalizedPhoneCountryView (1.0.3)
 
 DEPENDENCIES:
   - NMLocalizedPhoneCountryView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  NMLocalizedPhoneCountryView: 8f2f68f4e1a8b7b6c8f4dee86281cc3d10027d1d
+  NMLocalizedPhoneCountryView: cc67394530941b6d981f14f35999f0c7ae8dc4b2
 
 PODFILE CHECKSUM: 9b2008915da28f15a1cc254c667261ab8b76f39c
 

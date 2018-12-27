@@ -17,7 +17,7 @@ You can clone/download the repository and run the [demo project](https://github.
 
 ## Installation
 
-> Releases are Swift 4 compatible only.
+> Releases are Swift 4.2 compatible only.
 
 ### Cocoapods
 

@@ -136,9 +136,12 @@ public struct NMCountry {
 }
 
 public func ==(lhs: NMCountry, rhs: NMCountry) -> Bool {
+
     return lhs.code == rhs.code
 }
+
 public func !=(lhs: NMCountry, rhs: NMCountry) -> Bool {
+
     return lhs.code != rhs.code
 }
 
@@ -188,6 +191,7 @@ public class NMLocalizedPhoneCountryView: NMNibView {
     /// The spacing between the flag image and the text.
     public var flagSpacingInView: CGFloat {
         get {
+    
             return spacingConstraint.constant
         }
         set {
@@ -229,6 +233,7 @@ public class NMLocalizedPhoneCountryView: NMNibView {
         countryDetailsLabel.textColor = textColor
         if showPhoneCodeInView && showCountryCodeInView {
             countryDetailsLabel.text = "(\(selectedCountry.code)) \(selectedCountry.phoneCode)"
+
             return
         }
         
@@ -290,6 +295,7 @@ public class NMLocalizedPhoneCountryView: NMNibView {
         let bundle = Bundle(for: NMLocalizedPhoneCountryView.self)
         guard let jsonPath = bundle.path(forResource: "NMLocalizedPhoneCountryView.bundle/Data/CountryCodes", ofType: "json"),
             let jsonData = try? Data(contentsOf: URL(fileURLWithPath: jsonPath)) else {
+
                 return countries
         }
         
@@ -329,6 +335,7 @@ public class NMLocalizedPhoneCountryView: NMNibView {
             let country = NMCountry(name: name, nameOtherLocale: nameOtherLocale, countryCode: code, phoneCode: phoneCode, postalCode: postalCode, carrierCodes: carrierCodes, states: states, localeSetup: localeSetup)
             countries.append(country)
         }
+
         return countries
     }
     
@@ -353,20 +360,24 @@ extension NMLocalizedPhoneCountryView {
     public func setCountryByPhoneCode(_ phoneCode: String) {
         if let country = getCountries().first(where: { $0.phoneCode == phoneCode }) {
             selectedCountry = country
+            delegate?.localizedPhoneCountryView(self, didSelectCountry: country)
         }
     }
     
     public func setCountryByCode(_ code: String) {
         if let country = getCountries().first(where: { $0.code == code }) {
             selectedCountry = country
+            delegate?.localizedPhoneCountryView(self, didSelectCountry: country)
         }
     }
     
     public func getCountryByPhoneCode(_ phoneCode: String) -> NMCountry? {
+
         return getCountries().first(where: { $0.phoneCode == phoneCode })
     }
     
     public func getCountryByCode(_ code: String) -> NMCountry? {
+
         return getCountries().first(where: { $0.code == code })
     }
 }
@@ -387,33 +398,41 @@ extension NMLocalizedPhoneCountryView {
 
 extension NMLocalizedPhoneCountryView: NMLocalizedPhoneCountryViewDataSource {
     var preferredCountries: [NMCountry] {
+
         return dataSource?.preferredCountries(in: self) ?? preferredCountries(in: self)
     }
     
     var preferredCountriesSectionTitle: String? {
+
         return dataSource?.sectionTitleForPreferredCountries(in: self)
     }
     
     var showOnlyPreferredSection: Bool {
+
         return dataSource?.showOnlyPreferredSection(in: self) ?? showOnlyPreferredSection(in: self)
     }
     
     var navigationTitle: String? {
+
         return dataSource?.navigationTitle(in: self)
     }
     
     var closeButtonNavigationItem: UIBarButtonItem {
         guard let button = dataSource?.closeButtonNavigationItem(in: self) else {
+
             return UIBarButtonItem(title: "Close", style: .done, target: nil, action: nil)
         }
+
         return button
     }
     
     var searchBarPosition: SearchBarPosition {
+
         return dataSource?.searchBarPosition(in: self) ?? searchBarPosition(in: self)
     }
     
     var showPhoneCodeInList: Bool {
+
         return dataSource?.showPhoneCodeInList(in: self) ?? showPhoneCodeInList(in: self)
     }
     

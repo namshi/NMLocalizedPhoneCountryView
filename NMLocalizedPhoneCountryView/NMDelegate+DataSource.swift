@@ -57,30 +57,37 @@ public protocol NMLocalizedPhoneCountryViewDataSource: class {
 public extension NMLocalizedPhoneCountryViewDataSource {
     
     func preferredCountries(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> [NMCountry] {
+
         return []
     }
     
     func sectionTitleForPreferredCountries(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> String? {
+
         return nil
     }
     
     func showOnlyPreferredSection(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> Bool {
+
         return false
     }
     
     func navigationTitle(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> String? {
+
         return nil
     }
     
     func closeButtonNavigationItem(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> UIBarButtonItem? {
+
         return nil
     }
     
     func searchBarPosition(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> SearchBarPosition {
+
         return .tableViewHeader
     }
     
     func showPhoneCodeInList(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> Bool {
+
         return false
     }
 }

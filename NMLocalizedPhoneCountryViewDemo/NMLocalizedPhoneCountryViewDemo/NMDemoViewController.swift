@@ -150,26 +150,33 @@ extension DemoViewController: NMLocalizedPhoneCountryViewDataSource {
                     countries.append(country)
                 }
             }
+
             return countries
         }
+
         return []
     }
     
     func sectionTitleForPreferredCountries(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> String? {
         if localizedPhoneCountryView.tag == cpvMain.tag && showPreferredCountries.isOn {
+
             return "Preferred title"
         }
+
         return nil
     }
     
     func showOnlyPreferredSection(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> Bool {
         if localizedPhoneCountryView.tag == cpvMain.tag {
+
             return showOnlyPreferredCountries.isOn
         }
+
         return false
     }
     
     func navigationTitle(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> String? {
+
         return "Select any Country"
     }
         
@@ -181,13 +188,16 @@ extension DemoViewController: NMLocalizedPhoneCountryViewDataSource {
             default: return .hidden
             }
         }
+
         return .tableViewHeader
     }
     
     func showPhoneCodeInList(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> Bool {
         if localizedPhoneCountryView.tag == cpvMain.tag {
+
             return showPhoneCodeInList.isOn
         }
+
         return false
     }
 }

@@ -12,11 +12,13 @@ import UIKit
 extension UIWindow {
     var topViewController: UIViewController? {
         guard var top = rootViewController else {
+
             return nil
         }
         while let next = top.presentedViewController {
             top = next
         }
+
         return top
     }
 }

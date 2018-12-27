@@ -18,11 +18,13 @@ class NMLocalizedPhoneCountryViewController: UITableViewController {
     fileprivate var sectionsTitles = [String]()
     fileprivate var countries = [String: [NMCountry]]()
     fileprivate var hasPreferredSection: Bool {
+  
         return localizedPhoneCountryView.preferredCountriesSectionTitle != nil &&
             localizedPhoneCountryView.preferredCountries.count > 0
     }
     fileprivate var originalSemanticContentAttribute: UISemanticContentAttribute!
     fileprivate var showOnlyPreferredSection: Bool {
+  
         return localizedPhoneCountryView.showOnlyPreferredSection
     }
     
@@ -92,6 +94,7 @@ extension NMLocalizedPhoneCountryViewController {
             // Sort the sections
             data.forEach { key, value in
                 data[key] = value.sorted(by: { (lhs, rhs) -> Bool in
+           
                     return lhs.getLocalizedName(locale: localizedPhoneCountryView.localeSetup) < rhs.getLocalizedName(locale: localizedPhoneCountryView.localeSetup)
                 })
             }
@@ -125,6 +128,7 @@ extension NMLocalizedPhoneCountryViewController {
     func prepareSearchBar() {
         let searchBarPosition = localizedPhoneCountryView.searchBarPosition
         if searchBarPosition == .hidden  {
+         
             return
         }
         searchController = UISearchController(searchResultsController:  nil)
@@ -151,10 +155,12 @@ extension NMLocalizedPhoneCountryViewController {
 extension NMLocalizedPhoneCountryViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
+
         return isSearchMode ? 1 : sectionsTitles.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   
         return isSearchMode ? searchResults.count : countries[sectionsTitles[section]]!.count
     }
     
@@ -177,21 +183,26 @@ extension NMLocalizedPhoneCountryViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+   
         return isSearchMode ? nil : sectionsTitles[section].uppercased()
     }
     
     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         if isSearchMode {
+      
             return nil
         } else {
             if hasPreferredSection {
+            
                 return Array<String>(sectionsTitles.dropFirst())
             }
+            
             return sectionsTitles
         }
     }
     
     override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+
         return sectionsTitles.index(of: title)!
     }
 }
