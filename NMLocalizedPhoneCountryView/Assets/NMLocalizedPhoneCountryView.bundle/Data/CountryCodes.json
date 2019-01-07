@@ -36,7 +36,8 @@
 "name": "Andorra",
 "name_ar": "أندورا",
 "dial_code": "+376",
-"code": "AD"
+"code": "AD",
+"postal_code": "AD501"
 },
 {
 "name": "Angola",
@@ -591,7 +592,8 @@
 "name": "Gibraltar",
 "name_ar": "",
 "dial_code": "+350",
-"code": "GI"
+"code": "GI",
+"postal_code": "GX11 1AA"
 },
 {
 "name": "Greece",
@@ -669,7 +671,8 @@
 "name": "Holy See (Vatican City State)",
 "name_ar": "مدينة الفاتيكان",
 "dial_code": "+379",
-"code": "VA"
+"code": "VA",
+"postal_code": "00120"
 },
 {
 "name": "Honduras",
@@ -682,7 +685,8 @@
 "name": "Hong Kong",
 "name_ar": "هونغ كونغ",
 "dial_code": "+852",
-"code": "HK"
+"code": "HK",
+"postal_code": "999077"
 },
 {
 "name": "Hungary",
@@ -771,7 +775,8 @@
 "name": "Jersey",
 "name_ar": "جيرسي",
 "dial_code": "+44",
-"code": "JE"
+"code": "JE",
+"postal_code": "07097"
 },
 {
 "name": "Jordan",
@@ -844,7 +849,8 @@
 "name": "Lebanon",
 "name_ar": "لبنان",
 "dial_code": "+961",
-"code": "LB"
+"code": "LB",
+"postal_code": "1002"
 },
 {
 "name": "Lesotho",
@@ -877,7 +883,8 @@
 "name": "Lithuania",
 "name_ar": "لتوانيا",
 "dial_code": "+370",
-"code": "LT"
+"code": "LT",
+"postal_code": "LT-12345"
 },
 {
 "name": "Luxembourg",
@@ -989,13 +996,15 @@
 "name": "Moldova",
 "name_ar": "مولدافيا",
 "dial_code": "+373",
-"code": "MD"
+"code": "MD",
+"postal_code": "MD-2001"
 },
 {
 "name": "Monaco",
 "name_ar": "موناكو",
 "dial_code": "+377",
-"code": "MC"
+"code": "MC",
+"postal_code": "98000"
 },
 {
 "name": "Mongolia",
@@ -1061,7 +1070,8 @@
 "name": "Netherlands",
 "name_ar": "هولندا",
 "dial_code": "+31",
-"code": "NL"
+"code": "NL",
+"postal_code": "1000 AP"
 },
 {
 "name": "Netherlands Antilles",
@@ -1581,7 +1591,7 @@
 "name_ar": "الولايات المتحدة",
 "dial_code": "+1",
 "code": "US",
-"postal_code": "12345-6789",
+"postal_code": "12345",
 "states": [
     {
         "code": "AL",
