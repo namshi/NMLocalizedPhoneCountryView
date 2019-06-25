@@ -231,6 +231,7 @@ public class NMLocalizedPhoneCountryView: NMNibView {
         flagImageView.image = selectedCountry.flag
         countryDetailsLabel.font = self.getFontForSymbolicTrait(trait: selectedCountryFontTrait)
         countryDetailsLabel.textColor = textColor
+        countryDetailsLabel.textAlignment = localeSetup.isOtherLocale() ? .right : .left
         if showPhoneCodeInView && showCountryCodeInView {
             countryDetailsLabel.text = "(\(selectedCountry.code)) \(selectedCountry.phoneCode)"
 
