@@ -116,13 +116,11 @@ extension NMLocalizedPhoneCountryViewController {
     func prepareNavItem() {
         navigationItem.title = localizedPhoneCountryView.navigationTitle
 
-        // Add a close button if this is the root view controller
-        if navigationController?.viewControllers.count == 1 {
-            let closeButton = localizedPhoneCountryView.closeButtonNavigationItem
-            closeButton.target = self
-            closeButton.action = #selector(close)
-            navigationItem.leftBarButtonItem = closeButton
-        }
+        // Add a custom close button
+        let closeButton = localizedPhoneCountryView.closeButtonNavigationItem
+        closeButton.target = self
+        closeButton.action = #selector(close)
+        navigationItem.leftBarButtonItem = closeButton
     }
     
     func prepareSearchBar() {
@@ -138,6 +136,10 @@ extension NMLocalizedPhoneCountryViewController {
         searchController?.definesPresentationContext = true
         searchController?.searchBar.delegate = self
         searchController?.delegate = self
+        searchController?.searchBar.semanticContentAttribute = localizedPhoneCountryView.localeSetup.isOtherLocale() ? .forceRightToLeft : .forceLeftToRight
+        searchController?.searchBar.placeholder = localizedPhoneCountryView.searchBarPlaceHolderTitle
+        searchController?.searchBar.setValue(localizedPhoneCountryView.searchBarCancelButtonTitle, forKey: "cancelButtonText")
+        searchController?.hidesNavigationBarDuringPresentation = false
 
         switch searchBarPosition {
         case .tableViewHeader: tableView.tableHeaderView = searchController?.searchBar
@@ -147,6 +149,7 @@ extension NMLocalizedPhoneCountryViewController {
     }
     
     @objc private func close() {
+        self.navigationController?.popViewController(animated: true)
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
 }
@@ -262,7 +265,6 @@ extension NMLocalizedPhoneCountryViewController: UISearchResultsUpdating {
 extension NMLocalizedPhoneCountryViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         // Hide the back/left navigationItem button
-        navigationItem.leftBarButtonItem = nil
         navigationItem.hidesBackButton = true
     }
     

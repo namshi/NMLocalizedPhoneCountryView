@@ -418,6 +418,24 @@ extension NMLocalizedPhoneCountryView: NMLocalizedPhoneCountryViewDataSource {
         return dataSource?.navigationTitle(in: self)
     }
     
+    var searchBarPlaceHolderTitle: String? {
+        guard let placeHolderTitle = dataSource?.searchBarCancelButtonTitle(in: self) else {
+            
+            return "Search"
+        }
+        
+        return placeHolderTitle
+    }
+    
+    var searchBarCancelButtonTitle: String? {
+        guard let cancelButtonTitle = dataSource?.searchBarCancelButtonTitle(in: self) else {
+            
+            return "Cancel"
+        }
+        
+        return cancelButtonTitle
+    }
+    
     var closeButtonNavigationItem: UIBarButtonItem {
         guard let button = dataSource?.closeButtonNavigationItem(in: self) else {
 

@@ -41,12 +41,18 @@ public protocol NMLocalizedPhoneCountryViewDataSource: class {
     /// The navigation item title when the internal view controller is pushed/presented.
     func navigationTitle(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> String?
     
-    /// A navigation item button to be used if the internal view controller is presented(not pushed).
+    /// A navigation item button to be used if the internal view controller is presented/pushed.
     /// Return `nil` to use a default "Close" button.
     func closeButtonNavigationItem(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> UIBarButtonItem?
     
     /// The desired position for the search bar.
     func searchBarPosition(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> SearchBarPosition
+    
+    /// The search bar placeholder title when the internal view controller is pushed/presented.
+    func searchBarPlaceholderTitle(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> String?
+    
+    /// The search bar cancel button title when it is being edited
+    func searchBarCancelButtonTitle(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> String?
     
     /// This determines if a country's phone code is shown alongside the country's name on the list.
     /// e.g Nigeria (+234)
@@ -84,6 +90,16 @@ public extension NMLocalizedPhoneCountryViewDataSource {
     func searchBarPosition(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> SearchBarPosition {
 
         return .tableViewHeader
+    }
+    
+    func searchBarPlaceholderTitle(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> String? {
+        
+        return nil
+    }
+    
+    func searchBarCancelButtonTitle(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> String? {
+        
+        return nil
     }
     
     func showPhoneCodeInList(in localizedPhoneCountryView: NMLocalizedPhoneCountryView) -> Bool {
