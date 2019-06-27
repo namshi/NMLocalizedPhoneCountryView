@@ -149,8 +149,11 @@ extension NMLocalizedPhoneCountryViewController {
     }
     
     @objc private func close() {
-        self.navigationController?.popViewController(animated: true)
-        self.navigationController?.dismiss(animated: true, completion: nil)
+        if localizedPhoneCountryView.isViewControllerPushed {
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }
     }
 }
 
