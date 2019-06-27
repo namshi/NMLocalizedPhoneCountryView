@@ -150,6 +150,7 @@ public class NMLocalizedPhoneCountryView: NMNibView {
     @IBOutlet weak var spacingConstraint: NSLayoutConstraint!
     @IBOutlet public weak var flagImageView: UIImageView!
     @IBOutlet fileprivate weak var countryDetailsLabel: UILabel!
+    internal var isViewControllerPushed: Bool = false
     public var jsonCountries: Array<Any>? = nil
     public var localeSetup : NMLocaleSetup = NMLocaleSetup() {
         didSet { setup() }
@@ -263,12 +264,14 @@ public class NMLocalizedPhoneCountryView: NMNibView {
         if let viewController = viewController as? UINavigationController {
             delegate?.localizedPhoneCountryView(self, willShow: countryVc)
             viewController.pushViewController(countryVc, animated: true) {
+                self.isViewControllerPushed = true
                 self.delegate?.localizedPhoneCountryView(self, didShow: countryVc)
             }
         } else {
             let navigationVC = UINavigationController(rootViewController: countryVc)
             delegate?.localizedPhoneCountryView(self, willShow: countryVc)
             viewController.present(navigationVC, animated: true) {
+                self.isViewControllerPushed = false
                 self.delegate?.localizedPhoneCountryView(self, didShow: countryVc)
             }
         }
