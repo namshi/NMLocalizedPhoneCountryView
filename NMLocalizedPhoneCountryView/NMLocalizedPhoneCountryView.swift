@@ -422,7 +422,7 @@ extension NMLocalizedPhoneCountryView: NMLocalizedPhoneCountryViewDataSource {
     }
     
     var searchBarPlaceHolderTitle: String? {
-        guard let placeHolderTitle = dataSource?.searchBarCancelButtonTitle(in: self) else {
+        guard let placeHolderTitle = dataSource?.searchBarPlaceholderTitle(in: self) else {
             
             return "Search"
         }
