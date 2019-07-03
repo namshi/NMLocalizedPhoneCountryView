@@ -94,7 +94,7 @@ Change your app locale using
 ```
 cpvMain.localeSetup = NMLocaleSetup(baseLocale: sender.isOn ? "ar" : "Base", isRTL: sender.isOn)
 ```
-and see the same list of countries in other locale. We've use Arabic locale in our demo project. 
+and see the same list of countries in other locale. We've use Arabic locale in our demo project and our Base locale is English
 
 
 #### Adding new locale for countries view

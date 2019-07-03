@@ -268,6 +268,7 @@ extension NMLocalizedPhoneCountryViewController: UISearchResultsUpdating {
 extension NMLocalizedPhoneCountryViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         // Hide the back/left navigationItem button
+        navigationItem.leftBarButtonItem = nil
         navigationItem.hidesBackButton = true
     }
     
