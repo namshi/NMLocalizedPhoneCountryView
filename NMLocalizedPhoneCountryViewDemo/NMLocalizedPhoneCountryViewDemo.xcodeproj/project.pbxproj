@@ -113,7 +113,7 @@
 				004CA2FC1F705DD600B690B8 /* Frameworks */,
 				004CA2FD1F705DD600B690B8 /* Resources */,
 				509720AE1FDEE189001244B0 /* Embed Frameworks */,
-				B4F87707E83401659FA1C22A /* [CP] Embed Pods Frameworks */,
+				9CD15A4D094E1EDA573952C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,13 +174,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B4F87707E83401659FA1C22A /* [CP] Embed Pods Frameworks */ = {
+		9CD15A4D094E1EDA573952C6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NMLocalizedPhoneCountryViewDemo/Pods-NMLocalizedPhoneCountryViewDemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-NMLocalizedPhoneCountryViewDemo/Pods-NMLocalizedPhoneCountryViewDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/NMLocalizedPhoneCountryView/NMLocalizedPhoneCountryView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -189,7 +189,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NMLocalizedPhoneCountryViewDemo/Pods-NMLocalizedPhoneCountryViewDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NMLocalizedPhoneCountryViewDemo/Pods-NMLocalizedPhoneCountryViewDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FBD015984CE10E7BD30F91BD /* [CP] Check Pods Manifest.lock */ = {
