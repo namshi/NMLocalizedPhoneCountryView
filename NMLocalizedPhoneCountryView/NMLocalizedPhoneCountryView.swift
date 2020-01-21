@@ -152,7 +152,7 @@ public class NMLocalizedPhoneCountryView: NMNibView {
     @IBOutlet fileprivate weak var countryDetailsLabel: UILabel!
     internal var isViewControllerPushed: Bool = false
     public var jsonCountries: Array<Any>? = nil
-    public var localeSetup : NMLocaleSetup = NMLocaleSetup() {
+    public var localeSetup = NMLocaleSetup() {
         didSet { setup() }
     }
 
@@ -232,9 +232,9 @@ public class NMLocalizedPhoneCountryView: NMNibView {
         flagImageView.image = selectedCountry.flag
         countryDetailsLabel.font = self.getFontForSymbolicTrait(trait: selectedCountryFontTrait)
         countryDetailsLabel.textColor = textColor
-        countryDetailsLabel.textAlignment = localeSetup.isOtherLocale() ? .right : .left
+        countryDetailsLabel.textAlignment = localeSetup.isRTL ? .right : .left
         if showPhoneCodeInView && showCountryCodeInView {
-            countryDetailsLabel.text = "(\(selectedCountry.code)) \(selectedCountry.phoneCode)"
+            countryDetailsLabel.text = localeSetup.isRTL ? "\(selectedCountry.phoneCode) (\(selectedCountry.code))" : "(\(selectedCountry.code)) \(selectedCountry.phoneCode)"
 
             return
         }

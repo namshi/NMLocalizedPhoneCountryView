@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "NMLocalizedPhoneCountryView"
-  spec.version      = "1.0.8"
+  spec.version      = "1.0.9"
   spec.summary      = "iOS library to add support for selecting a country and its international phone code in your app"
   spec.description      = <<-DESC
   iOS library to add support for selecting a country and its international phone code in your app with localized country names. It can also exclude countries based on countryCodes. Inspiration from https://github.com/kizitonwose/CountryPickerView pod.
